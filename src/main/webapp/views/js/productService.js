@@ -9,6 +9,11 @@ productService.factory('productService',function($resource){
 
 })
 
+productService.factory('queryProductService',function($resource){
+    return $resource('/getProduct/?name=:name', { query:{method:'GET',param:{name:''},isArray:true}
+    });
+})
+
 productService.service('totalCalService',function() {
     this.getTotalNetPrice = function (products) {
         var output = 0.0;
