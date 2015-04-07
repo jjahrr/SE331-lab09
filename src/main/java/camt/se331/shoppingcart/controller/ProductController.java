@@ -22,6 +22,11 @@ public class ProductController {
         return productService.getProducts();
     }
 
+    @RequestMapping(value = "getProduct",method = RequestMethod.GET)
+    public  List<Product> getListByName(@RequestParam("name") String name){
+        return productService.getProductsByName(name);
+    }
+
     @RequestMapping(value = "product",method = RequestMethod.POST)
     public @ResponseBody Product add(@RequestBody Product product, BindingResult bindingResult){
         return productService.addProduct(product);
