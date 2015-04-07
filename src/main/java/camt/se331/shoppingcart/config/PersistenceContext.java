@@ -75,8 +75,8 @@ class PersistenceContext {
         factory.setPackagesToScan(ENTITY_PACKAGES);
         factory.setDataSource(dataSource);
         Properties jpaProperties = new Properties();
-        jpaProperties.put(PROPERTY_NAME_HIBERNATE_DIALECT,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO));
-        jpaProperties.put(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_SHOW_SQL));
+        jpaProperties.put(PROPERTY_NAME_HIBERNATE_DIALECT,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_DIALECT));
+        jpaProperties.put(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO));
         jpaProperties.put(PROPERTY_NAME_HIBERNATE_SHOW_SQL,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_SHOW_SQL));
         jpaProperties.put(PROPERTY_NAME_HIBERNATE_FORMAT_SQL,env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_FORMAT_SQL));
 
